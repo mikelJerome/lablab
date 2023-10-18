@@ -7,8 +7,9 @@ package model
 */
 
 type Equipment struct {
-	EquipmentID uint `gorm:"primaryKey"`
-	Name        string
-	Type        string
-	Stock       int
+	Model
+	Identity uint
+	Name     string
+	Type     string
+	Stock    int
 }

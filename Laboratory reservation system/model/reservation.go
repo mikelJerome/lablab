@@ -13,9 +13,12 @@ import "time"
 // 预约记录表
 
 type Reservation struct {
-	ReservationID   uint `gorm:"primaryKey"`
-	Username        string
-	EquipmentID     uint
-	ReservationTime time.Time `gorm:"type:datetime"`
-	Status          string
+	Model
+	UserID      uint
+	User        *User `gorm:"foreignKey:Identity;reference:user_identity;"`
+	EquipmentID uint
+	Equipment   *Equipment `gorm:"foreignKey:Identity;reference:equipment_identity;"`
+	StartTime   time.Time  `gorm:"type:datetime"`
+	OverTime    time.Time  `gorm:"type:datetime"`
+	Status      string
 }
