@@ -1,7 +1,6 @@
 package utils
 
 import (
-	"encoding/json"
 	"fmt"
 	"gopkg.in/gomail.v2"
 )
@@ -24,7 +23,7 @@ type MailboxConf struct {
 	SMTPPort int
 }
 
-func Email() {
+func Email() string {
 	var mailConf MailboxConf
 	mailConf.Title = "验证"
 	//这里支持群发，只需填写多个人的邮箱即可，我这里发送人使用的是QQ邮箱，所以接收人也必须都要是
@@ -66,12 +65,13 @@ func Email() {
 	m.SetHeader(`Subject`, mailConf.Title)
 	m.SetBody(`text/html`, html)
 	// m.Attach("./Dockerfile") //添加附件
-	err := gomail.NewDialer(mailConf.SMTPAddr, mailConf.SMTPPort, mailConf.Sender, mailConf.SPassword).DialAndSend(m)
-	if err != nil {
-		b, _ := json.Marshal("验证码返回失败，请输入正确的邮箱")
-		fmt.Printf(string(b))
-		return
-	}
-	b, _ := json.Marshal("验证码返回成功，输入的邮箱有效")
-	fmt.Printf(string(b))
+	_ = gomail.NewDialer(mailConf.SMTPAddr, mailConf.SMTPPort, mailConf.Sender, mailConf.SPassword).DialAndSend(m)
+	//if err != nil {
+	//	b, _ := json.Marshal("验证码返回失败，请输入正确的邮箱")
+	//	fmt.Printf(string(b))
+	//	return
+	//}
+	//b, _ := json.Marshal("验证码返回成功，输入的邮箱有效")
+	//fmt.Printf(string(b))
+	return verify
 }

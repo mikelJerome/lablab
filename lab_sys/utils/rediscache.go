@@ -3,6 +3,7 @@ package utils
 import (
 	"context"
 	"github.com/go-redis/redis/v8"
+	"time"
 )
 
 type RedisClient struct {
@@ -25,8 +26,10 @@ func NewRedisClient() (*RedisClient, error) {
 	return &red, nil
 }
 
-func (redis *RedisClient) SeCachet(key string, value interface{}) {
-	redis.client.Set(redis.client.Context(), key, value, 0)
+// set 存储键值
+func (redis *RedisClient) SeCachet(key string, value interface{}, expiretiem time.Duration) {
+
+	redis.client.Set(redis.client.Context(), key, value, expiretiem)
 }
 
 // SGet 通过键从 Redis 中获取字符串值
@@ -34,3 +37,5 @@ func (redis *RedisClient) GetCache(key string) (string, error) {
 	code, _ := redis.client.Get(context.Background(), key).Result()
 	return code, nil
 }
+
+// 删除键值

@@ -1,7 +1,7 @@
 package test_test
 
 import (
-	"lab_sys/utils"
+	"lab_sys/lab_sys/utils"
 	"testing"
 )
 

@@ -3,7 +3,7 @@ package main
 import (
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
-	"lab_sys/model"
+	"lab_sys/lab_sys/model"
 )
 
 func main() {
