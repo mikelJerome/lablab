@@ -26,6 +26,15 @@ func CreateEquipment(equip model.Equipment) (*model.Equipment, error) {
 	return &equip, nil
 }
 
+// 查询器材
+func FindEquipmentByType(Type string) (*model.Equipment, error) {
+	equip := model.Equipment{}
+	if tx := global.DB.Where("type = ?", Type).First(&equip); tx.RowsAffected == 0 {
+		return nil, errors.New("find failed")
+	}
+	return &equip, nil
+}
+
 // 更新器材
 func UpdateEquipment(equip model.Equipment) (*model.Equipment, error) {
 	tx := global.DB.Updates(model.Equipment{
