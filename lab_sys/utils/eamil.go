@@ -23,12 +23,12 @@ type MailboxConf struct {
 	SMTPPort int
 }
 
-func Email() string {
+func Email(email string) string {
 	var mailConf MailboxConf
 	mailConf.Title = "验证"
 	//这里支持群发，只需填写多个人的邮箱即可，我这里发送人使用的是QQ邮箱，所以接收人也必须都要是
 	//QQ邮箱
-	mailConf.RecipientList = `262396235@qq.com`
+	mailConf.RecipientList = email
 	mailConf.Sender = `262396235@qq.com`
 
 	mailConf.SPassword = "lbmdohlulybfcacf"

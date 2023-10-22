@@ -13,8 +13,6 @@ import (
 器材id
 */
 
-//https://juejin.cn/post/696584936159916852088
-
 type Model struct {
 	ID        uint `gorm:"primaryKey"`
 	CreatedAt time.Time
