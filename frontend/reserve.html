@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>预约页面</title>
+</head>
+<body>
+<h1>预约器材</h1>
+<form id="reservationForm">
+    <label for="username">用户名：</label>
+    <input type="text" id="username" name="username" required><br><br>
+
+    <label for="equipmentName">器材名称：</label>
+    <input type="text" id="equipmentName" name="equipmentName" required><br><br>
+
+    <label for="startTime">开始时间：</label>
+    <input type="text" id="startTime" name="startTime" placeholder="YYYY-MM-DD HH:mm" required><br><br>
+
+    <label for="overTime">结束时间：</label>
+    <input type="text" id="overTime" name="overTime" placeholder="YYYY-MM-DD HH:mm" required><br><br>
+
+    <button type="button" onclick="submitReservation()">提交预约</button>
+</form>
+
+<div id="responseMessage"></div>
+
+<script>
+    // 将日期时间选择器的值设置为指定格式
+    function setFormattedDateTimeInput(inputId, value) {
+        const inputField = document.getElementById(inputId);
+        const formattedValue = value.toISOString().slice(0, 16).replace('T', ' ');
+        inputField.value = formattedValue;
+    }
+
+    // 日期时间选择器的值更改时，格式化为指定格式
+    document.getElementById("startTime").addEventListener("change", function () {
+        const selectedDateTime = new Date(this.value);
+        setFormattedDateTimeInput("startTime", selectedDateTime);
+    });
+
+    document.getElementById("overTime").addEventListener("change", function () {
+        const selectedDateTime = new Date(this.value);
+        setFormattedDateTimeInput("overTime", selectedDateTime);
+    });
+
+    function submitReservation() {
+        const username = document.getElementById("username").value;
+        const equipmentName = document.getElementById("equipmentName").value;
+        const startTime = document.getElementById("startTime").value;
+        const overTime = document.getElementById("overTime").value;
+
+        // Send a POST request to the backend
+        fetch('/reserve', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `username=${username}&equipmentName=${equipmentName}&startTime=${startTime}&overTime=${overTime}`
+        })
+            .then(response => response.json())
+            .then(data => {
+                const responseMessage = document.getElementById("responseMessage");
+                if (data.error) {
+                    responseMessage.textContent = `Error: ${data.error}`;
+                } else {
+                    responseMessage.textContent = `Message: ${data.message}`;
+                }
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+</script>
+</body>
+</html>
