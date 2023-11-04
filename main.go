@@ -1,8 +1,8 @@
 package main
 
 import (
-	"lab_sys/lab_sys/initialize"
-	"lab_sys/lab_sys/routes"
+	"lab_sys/initialize"
+	"lab_sys/routes"
 )
 
 func main() {

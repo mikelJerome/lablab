@@ -1,10 +1,11 @@
 package test
 
 import (
+	"lab_sys/model"
+	"testing"
+
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
-	"lab_sys/lab_sys/model"
-	"testing"
 )
 
 func TestSql(t *testing.T) {

@@ -1,10 +1,11 @@
 package handler
 
 import (
+	"lab_sys/database"
+	"lab_sys/model"
+	"lab_sys/utils"
+
 	"github.com/gin-gonic/gin"
-	"lab_sys/lab_sys/database"
-	"lab_sys/lab_sys/model"
-	"lab_sys/lab_sys/utils"
 )
 
 // 设置一个登录请求

@@ -2,11 +2,12 @@ package initialize
 
 import (
 	"fmt"
-	"gorm.io/gorm/schema"
-	"lab_sys/lab_sys/global"
+	"lab_sys/global"
 	"log"
 	"os"
 	"time"
+
+	"gorm.io/gorm/schema"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

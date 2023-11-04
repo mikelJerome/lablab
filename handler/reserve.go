@@ -1,11 +1,12 @@
 package handler
 
 import (
-	"github.com/gin-gonic/gin"
-	"lab_sys/lab_sys/database"
-	"lab_sys/lab_sys/model"
+	"lab_sys/database"
+	"lab_sys/model"
 	"net/http"
 	"time"
+
+	"github.com/gin-gonic/gin"
 )
 
 //根据条件查询预约

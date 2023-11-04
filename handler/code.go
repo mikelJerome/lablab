@@ -1,10 +1,11 @@
 package handler
 
 import (
-	"github.com/gin-gonic/gin"
-	"lab_sys/lab_sys/utils"
+	"lab_sys/utils"
 	"net/http"
 	"sync"
+
+	"github.com/gin-gonic/gin"
 )
 
 //	type EmailData struct {

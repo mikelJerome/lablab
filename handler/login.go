@@ -1,9 +1,10 @@
 package handler
 
 import (
-	"github.com/gin-gonic/gin"
-	"lab_sys/lab_sys/database"
+	"lab_sys/database"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 func Login(c *gin.Context) {

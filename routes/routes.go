@@ -1,8 +1,9 @@
 package routes
 
 import (
+	"lab_sys/handler"
+
 	"github.com/gin-gonic/gin"
-	"lab_sys/lab_sys/handler"
 )
 
 // 请求
@@ -11,7 +12,7 @@ func Router() *gin.Engine {
 	r := gin.Default()
 
 	//就在html模板
-	r.LoadHTMLGlob("./lab_sys/frontend/*")
+	r.LoadHTMLGlob("./frontend/*")
 	r.GET("/rhtml", func(c *gin.Context) {
 		c.HTML(200, "Register.html", nil)
 	})
