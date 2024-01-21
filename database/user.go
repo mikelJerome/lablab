@@ -2,10 +2,9 @@ package database
 
 import (
 	"errors"
+	"go.uber.org/zap"
 	"lab_sys/global"
 	"lab_sys/model"
-
-	"go.uber.org/zap"
 )
 
 // 获取用户列表

@@ -1,12 +1,14 @@
 package handler
 
 import (
+	"github.com/gin-gonic/gin"
+	redislock "github.com/jefferyjob/go-redislock"
 	"lab_sys/database"
+	"lab_sys/global"
 	"lab_sys/model"
+	"lab_sys/response"
 	"net/http"
 	"time"
-
-	"github.com/gin-gonic/gin"
 )
 
 //根据条件查询预约
@@ -53,18 +55,22 @@ func Reserve(c *gin.Context) {
 		c.JSON(200, gin.H{"errors": "没有这个实验器材"})
 		return
 	}
+	lockerClient := redislock.New(c, global.Redis, user.Username+" "+equipmentName+" "+startTime+" "+overTime, redislock.WithTimeout(time.Duration(10)*time.Second))
 	reserve := model.Reservation{
 		UserID:      user.ID,
 		EquipmentID: equipment.ID,
 		StartTime:   startTimeStr,
 		OverTime:    overTimeStr,
 	}
+
 	createdReservation, err := database.CreateReservation(reserve)
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "注册用户失败"})
+		response.Err(c, http.StatusBadRequest, 500, "创建用户失败", nil)
 		return
 	}
-
+	lockerClient.Lock()
+	defer lockerClient.UnLock()
 	// 返回预约成功消息
+
 	c.JSON(http.StatusOK, gin.H{"message": "用户预约成功", "reservation": createdReservation})
 }

@@ -2,10 +2,10 @@ package database
 
 import (
 	"errors"
+	"go.uber.org/zap"
 	"lab_sys/global"
 	"lab_sys/model"
-
-	"go.uber.org/zap"
+	"time"
 )
 
 // 获取预约列表
@@ -47,6 +47,7 @@ func FindReservationByEquip(equip string) (*model.Reservation, error) {
 }
 
 // 创建预约
+
 func CreateReservation(reservation model.Reservation) (*model.Reservation, error) {
 	tx := global.DB.Create(&reservation)
 	if tx.RowsAffected == 0 {
@@ -57,6 +58,7 @@ func CreateReservation(reservation model.Reservation) (*model.Reservation, error
 }
 
 // 更新预约
+
 func UpdateReservation(reservation model.Reservation) (*model.Reservation, error) {
 	tx := global.DB.Updates(model.Reservation{
 		UserID:      reservation.UserID,
@@ -72,6 +74,7 @@ func UpdateReservation(reservation model.Reservation) (*model.Reservation, error
 }
 
 // 删除预约
+
 func DeleteReservation(reservation model.Reservation) error {
 	tx := global.DB.Delete(&reservation)
 	if tx.RowsAffected == 0 {
@@ -79,4 +82,33 @@ func DeleteReservation(reservation model.Reservation) error {
 		return errors.New("delete failed")
 	}
 	return nil
+}
+
+// 检查给定时间段内是否有预约冲突，并返回冲突预约的用户名字
+
+func CheckForReservationConflict(startTime, endTime time.Time) ([]string, error) {
+	var reservations []struct {
+		model.Reservation
+		Username string
+	}
+
+	// 查找在指定时间段内开始或结束的预约，并关联用户表以获取用户名
+	tx := global.DB.Table("reservations").
+		Select("reservations.*, users.username").
+		Joins("join users on users.id = reservations.user_id").
+		Where("reservations.start_time BETWEEN ? AND ? OR reservations.over_time BETWEEN ? AND ?", startTime, endTime, startTime, endTime).
+		Find(&reservations)
+
+	// 检查是否找到了记录
+	if tx.Error != nil {
+		return nil, tx.Error
+	}
+
+	// 提取用户名
+	var userNames []string
+	for _, reservation := range reservations {
+		userNames = append(userNames, reservation.Username)
+	}
+
+	return userNames, nil
 }

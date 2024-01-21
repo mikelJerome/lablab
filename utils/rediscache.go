@@ -1,31 +1,35 @@
 package utils
 
 import (
-	"fmt"
-	"github.com/go-redis/redis"
+	"context"
+	"github.com/go-redis/redis/v8" // 更新为 v8 版本
+	"go.uber.org/zap"
+	"lab_sys/global"
 	"time"
+	//redislock "github.com/jefferyjob/go-redislock"
 )
 
-var Redis *RedisClient
-
 // RedisClient 扩展了 redis.Client 并添加了额外的功能
-type RedisClient struct {
-	*redis.Client
-}
+//type RedisClient struct {
+//	*redis.Client
+//}
 
 // NewRedisClient 初始化 Redis 客户端
 func NewRedisClient() error {
-	if Redis != nil {
+	if global.Redis != nil {
 		return nil
 	}
 
+	ctx := context.Background() // 创建一个 context
+
 	// 使用指定的选项创建一个新的 Redis 客户端
 	client := redis.NewClient(&redis.Options{
+		// ... 其他选项保持不变 ...
 		Addr:     "127.0.0.1:6379", // Redis 服务器地址
 		Password: "",               // Redis 服务器密码，如果有的话
-		DB:       1,                // Redis 数据库编号
-
+		DB:       0,                // Redis 数据库编号
 		// 连接池设置
+
 		PoolSize: 10, // 连接池中保持的连接数
 
 		// 超时设置
@@ -40,79 +44,59 @@ func NewRedisClient() error {
 		MaxConnAge:         0 * time.Second,  // 连接的最大存活时间，0 表示无最大存活时间
 
 		// 命令重试设置
-		MaxRetries:      0,                      // 命令执行失败时的最大重试次数，0 表示不重试
+		MaxRetries:      3,                      // 命令执行失败时的最大重试次数，0 表示不重试
 		MinRetryBackoff: 8 * time.Millisecond,   // 重试间隔时间的最小值，-1 表示无间隔
 		MaxRetryBackoff: 512 * time.Millisecond, // 重试间隔时间的最大值，-1 表示无间隔
 
-		// 在需要从连接池获取连接时，如果连接池需要创建新连接，则调用此钩子函数
-		OnConnect: func(conn *redis.Conn) error {
-			fmt.Printf("创建新的连接：%v\n", conn)
-			return nil
-		},
 	})
 
 	// 向 Redis 服务器发送 Ping 命令以测试连接
-	_, err := client.Ping().Result()
+	_, err := client.Ping(ctx).Result() // 使用 context
 	if err != nil {
+		zap.L().Error("测试不成功", zap.Error(err))
 		return err
 	}
 
 	// 将全局的 Redis 变量设置为新创建的 Redis 客户端
-	Redis = &RedisClient{client}
-	return nil
+
+	global.Redis = client
+
+	return err
 }
 
 // 在导入包时初始化 Redis 客户端
-func init() {
-	err := NewRedisClient()
-	if err != nil {
-		fmt.Println("连接 Redis 客户端失败")
-	}
-}
+//func init() {
+//	err := NewRedisClient()
+//	if err != nil {
+//		fmt.Println("连接 Redis 客户端失败")
+//	}
+//}
 
 // SSet 在 Redis 中设置一个字符串值，可选设置过期时间（默认为 24 小时）
-func (redis *RedisClient) SSet(key string, value interface{}) *redis.StatusCmd {
-	return redis.Set(key, value, 2*time.Minute)
-}
+//func (r RedisClient) SSet(ctx context.Context, key string, value interface{}) *redis.StatusCmd {
+//	//ctx := context.Background()                 // 创建 context
+//	return r.Set(ctx, key, value, 24*time.Hour) // 使用 context
+//}
 
 // SGet 通过键从 Redis 中获取字符串值
-func (redis *RedisClient) SGet(key string) string {
-	return redis.Get(key).String()
-}
+//func (r *RedisClient) SGet(ctx context.Context, key string) (string, error) {
+//	//ctx := context.Background()     // 创建 context
+//	return r.Get(ctx, key).Result() // 使用 context
+//}
 
 // Close 关闭 Redis 客户端
-func (redis *RedisClient) Close() {
-	redis.Close()
-}
+//func (r *RedisClient) Close() {
+//	r.Client.Close()
+//	//ctx := context.Background() // 创建 context
+//}
 
 // GetRedisClient 返回 Redis 客户端，如果未初始化，则进行初始化
-func GetRedisClient() (*RedisClient, error) {
-	if Redis == nil {
+func GetRedisClient() (*redis.Client, error) {
+	if global.Redis == nil {
 		err := NewRedisClient()
 		if err != nil {
 			return nil, err
 		}
-		return Redis, nil
 	}
-	return Redis, nil
+	return global.Redis, nil
 }
-
-// set 存储键值
-//func (redis *RedisClient) SeCachet(key string, value interface{}, expiretiem time.Duration) *redis.StatusCmd {
-//当我们在Go代码中执行一个Redis命令时（例如使用redis.Client的Set方法），返回的结果是一个redis.StatusCmd类型。通过redis.StatusCmd，我们可以获取执行命令的结果、错误信息以及其他相关的元数据。
-//
-//以下是一些常用的redis.StatusCmd方法和属性：
-//
-//Val()：获取命令执行的结果值。
-//Err()：获取执行命令期间发生的错误。
-//String() string：获取命令执行结果的字符串表示形式。
-//Result() (string, error)：获取命令执行的结果和错误，以元组形式返回。
-//return redis.Set(key, value, expiretiem)
-//}
-
-// SGet 通过键从 Redis 中获取字符串值
-//func (redis *RedisClient) GetCache(key string) string {
-//	return redis.Get(key).String()
-//}
-
-// 删除键值

@@ -22,10 +22,10 @@ type Model struct {
 
 type User struct {
 	Model
-	Username string `gorm:"type:varchar(255)"`
-	Password string
-	Phone    string `valid:"matches(^1[1-9]{1}\\d{9}$)"`
-	Email    string
+	Username string `gorm:"type:varchar(255)" form:"username" binding:"required"`
+	Password string `valid:"matches{8,}$" form:"password" binding:"required"` // 废弃字段
+	Phone    string `valid:"matches(^1[1-9]{1}\\d{9}$)" form:"phone" binding:"required"`
+	Email    string `form:"email" binding:"required,email"`
 }
 
 func (User) TableName() string {

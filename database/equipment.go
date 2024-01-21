@@ -2,11 +2,9 @@ package database
 
 import (
 	"errors"
-	"lab_sys/global"
-
-	"lab_sys/model"
-
 	"go.uber.org/zap"
+	"lab_sys/global"
+	"lab_sys/model"
 )
 
 // 获取器材列表

@@ -1,10 +1,10 @@
 package handler
 
 import (
+	"github.com/gin-gonic/gin"
+	"go.uber.org/zap"
 	"lab_sys/database"
 	"net/http"
-
-	"github.com/gin-gonic/gin"
 )
 
 func Login(c *gin.Context) {
@@ -13,18 +13,19 @@ func Login(c *gin.Context) {
 	user, err := database.FindUserByPhone(phone)
 	if err != nil {
 		// 电话号码不匹配
+		zap.L().Error("您正在尝试没有注册的电话号码")
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid phone number"})
 		return
 	}
 	if user.Username != username {
 		// 用户不存在
+		zap.L().Error("用户不存在并且没有查到")
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid username"})
 		return
 	}
 	c.JSON(200, gin.H{
-		"message": "登录成功",
-		"code":    user,
+		"message": "success",
+		//"code":    200,
 	})
 
-	//fmt.Println
 }
