@@ -1,0 +1,787 @@
+2024-01-18T04:26:37.300+0800	ERROR	handler/register.go:27	校验验证码失败	{"error": "redis: nil"}
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:27
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T04:26:37.300+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "username=liuan&password=123456789&phone=19882954753&email=2353208816@qq.com&verifycode=21314", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "1.4372ms"}
+2024-01-18T04:27:59.839+0800	ERROR	handler/register.go:27	校验验证码失败	{"error": "验证码错误或者已过期"}
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:27
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T04:27:59.841+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "username=liuan&password=123456789&phone=19882954753&email=2353208816@qq.com&verifycode=02303", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "2.6888ms"}
+2024-01-18T04:30:10.963+0800	ERROR	handler/register.go:27	校验验证码失败	{"error": "验证码错误或者已过期"}
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:27
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T04:30:10.965+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "username=liuan&password=123456789&phone=19882954753&email=2353208816@qq.com&verifycode=%7B%7Bverifycode%7D%7D", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "2.5088ms"}
+2024-01-18T04:43:40.094+0800	ERROR	handler/register.go:27	校验验证码失败	{"error": "验证码错误或者已过期"}
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:27
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T04:43:40.096+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "2.6562ms"}
+2024-01-18T04:47:31.565+0800	ERROR	handler/register.go:27	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:27
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T04:47:31.567+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "2.3795ms"}
+2024-01-18T04:49:15.248+0800	ERROR	handler/register.go:27	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:27
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T04:49:15.249+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "2.9928ms"}
+2024-01-18T04:49:48.201+0800	ERROR	handler/register.go:27	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:27
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T04:49:48.203+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "2.2442ms"}
+2024-01-18T04:49:54.507+0800	ERROR	handler/register.go:27	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:27
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T04:49:54.509+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "1.8899ms"}
+2024-01-18T05:06:21.756+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T05:06:21.757+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "1.2024ms"}
+2024-01-18T05:14:28.492+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T05:14:28.492+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "1.0987ms"}
+2024-01-18T05:14:54.280+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T05:14:54.282+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "4.6243ms"}
+2024-01-18T05:19:36.572+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T05:19:36.574+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "1.9611ms"}
+2024-01-18T05:23:52.819+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T05:23:52.821+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "2.8412ms"}
+2024-01-18T05:24:21.736+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T05:24:21.739+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "3.1876ms"}
+2024-01-18T05:24:25.870+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T05:24:25.872+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "2.0172ms"}
+2024-01-18T05:24:47.823+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T05:24:47.825+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "4.0118ms"}
+2024-01-18T05:29:19.711+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T05:29:19.712+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "2.3211ms"}
+2024-01-18T05:33:36.065+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T05:33:36.066+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "2.6079ms"}
+2024-01-18T05:35:00.280+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T05:35:00.282+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "3.265ms"}
+2024-01-18T05:35:48.402+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T05:35:48.405+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "3.8449ms"}
+2024-01-18T05:37:49.338+0800	ERROR	handler/register.go:29	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:29
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T05:37:49.339+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "2.5313ms"}
+2024-01-18T05:39:18.404+0800	ERROR	handler/register.go:29	校验验证码失败
+lab_sys/handler.RegisterHandler
+	D:/lab/handler/register.go:29
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinRecovery.func1
+	D:/lab/middleware/LogAndRecovery.go:82
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+lab_sys/middleware.GinLogger.func1
+	D:/lab/middleware/LogAndRecovery.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T05:39:18.407+0800	INFO	middleware/LogAndRecovery.go:26	/v1/user/register	{"status": 400, "method": "POST", "path": "/v1/user/register", "query": "", "ip": "127.0.0.1", "user-agent": "Apifox/1.0.0 (https://apifox.com)", "errors": "", "cost": "4.3472ms"}
+2024-01-18T17:10:56.783+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.Register
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T17:12:23.830+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.Register
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T17:14:42.274+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.Register
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T17:25:22.179+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.Register
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T17:25:40.633+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.Register
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T18:02:24.615+0800	ERROR	handler/register.go:28	校验验证码失败
+lab_sys/handler.Register
+	D:/lab/handler/register.go:28
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-18T18:05:42.585+0800	INFO	database/user.go:50	create failed

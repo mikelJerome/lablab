@@ -1,0 +1,62 @@
+# Project Directory Structure
+
+- **.idea/**
+  - `.gitignore`
+  - `.name`
+  - **codeStyles/**
+    - `codeStyleConfig.xml`
+  - `lab_sys.iml`
+  - `modules.xml`
+  - `vcs.xml`
+  - `workspace.xml`
+- **config/**
+  - `config.go`
+- **database/**
+  - `equipment.go`
+  - `reservation.go`
+  - `user.go`
+- `directory_structure.md`
+- **frontend/**
+  - `1.html`
+  - `2.html`
+  - `3.html`
+  - `4.html`
+- **global/**
+  - `global.go`
+- `go.mod`
+- `go.sum`
+- **handler/**
+  - `login.go`
+  - `register.go`
+  - `reqEmail.go`
+  - `reserve.go`
+- **initialize/**
+  - `config.go`
+  - `db.go`
+  - `db_test.go`
+  - `logger.go`
+  - `redis.go`
+  - `routers.go`
+- **logs/**
+  - `log_ 2024-01-15.log`
+- `main.go`
+- **middleware/**
+  - `-.md`
+  - `LogAndRecovery.go`
+- **model/**
+  - `equipment.go`
+  - `reservation.go`
+  - `user.go`
+- **router/**
+  - `user.go`
+- `setting.yaml`
+- **test/**
+  - `directory_structure.md`
+  - `emai_test.go`
+  - `output_test.go`
+  - `redislock_test.go`
+- **utils/**
+  - `RandomNumber.go`
+  - `email.go`
+  - `rediscache.go`
+  - `toolsFunc.go`

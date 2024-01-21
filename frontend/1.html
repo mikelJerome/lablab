@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>verifycode</title>
+<style>
+  body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fde4f1; /* 浅粉色背景 */
+  }
+  .header {
+    background-color: #ffb6c1; /* 淡粉红色 */
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    border-bottom: 5px solid #ff69b4; /* 强粉红色边框 */
+    border-radius: 0 0 15px 15px; /* 圆角边框 */
+  }
+  .content {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px dashed #ff69b4; /* 虚线边框 */
+    border-radius: 15px; /* 圆角 */
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.6); /* 柔和的阴影 */
+  }
+  .footer {
+    background-color: #ffb6c1;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
+    border-top: 5px solid #de81b1;
+    border-radius: 15px 15px 0 0;
+  }
+  h1 {
+    font-size: 2em;
+    text-shadow: 2px 2px 2px #de5da0; /* 文字阴影 */
+  }
+  p {
+    color: #555;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>欢迎来到513实验室</h1>
+</div>
+
+<div class="content">
+<!--  <p>这里是充满爱的内容,你可以感受到温暖和快乐。</p>-->
+  <p>让我们一起享受实验的乐趣吧！</p>
+  <p>您本次的验证码是{{VERIFY_CODE}},为了你的账号安全请勿泄露。<p>
+</div>
+
+<div class="footer">
+  <p>@(●'◡'●)塔里木大学513实验室</p>
+</div>
+
+</body>
+</html>

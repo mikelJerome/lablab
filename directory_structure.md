@@ -1,0 +1,45 @@
+# Project Directory Structure
+
+- **.idea/**
+  - `.gitignore`
+  - `.name`
+  - `lab_sys.iml`
+  - `modules.xml`
+  - `vcs.xml`
+  - `workspace.xml`
+- `README.md`
+- **config/**
+  - `config.go`
+- **database/**
+  - `equipment.go`
+  - `reservation.go`
+  - `user.go`
+- `directory_structure.md`
+- **global/**
+  - `global.go`
+- `go.mod`
+- `go.sum`
+- **handler/**
+  - `code.go`
+  - `login.go`
+  - `register.go`
+  - `reserve.go`
+- **initialize/**
+  - `db.go`
+  - `logger.go`
+- `main.go`
+- **model/**
+  - `equipment.go`
+  - `reservation.go`
+  - `user.go`
+- `output.go`
+- **routes/**
+  - `routes.go`
+- **test/**
+  - `randnumber_test.go`
+  - `sql_test.go`
+- **utils/**
+  - `RandomNumber.go`
+  - `eamil.go`
+  - `rediscache.go`
+  - `set.go`
