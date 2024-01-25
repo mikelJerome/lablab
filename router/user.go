@@ -13,7 +13,7 @@ func UserRouter(v1 *gin.RouterGroup) {
 		UserRouter.GET("login", handler.Login)
 		UserRouter.POST("reqCode", handler.RequestVerifyCode)
 		UserRouter.POST("register", handler.Register)
-
+		UserRouter.POST("reserve", handler.Reserve)
 	}
 
 }

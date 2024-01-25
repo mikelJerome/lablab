@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 	"lab_sys/database"
+	"lab_sys/response"
 	"net/http"
 )
 
@@ -23,9 +24,5 @@ func Login(c *gin.Context) {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid username"})
 		return
 	}
-	c.JSON(200, gin.H{
-		"message": "success",
-		//"code":    200,
-	})
-
+	response.Success(c, http.StatusOK, 200, "success")
 }

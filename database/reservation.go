@@ -89,15 +89,15 @@ func DeleteReservation(reservation model.Reservation) error {
 func CheckForReservationConflict(startTime, endTime time.Time) ([]string, error) {
 	var reservations []struct {
 		model.Reservation
-		Username string
+		Username string `gorm:"column:username"` // 确保字段名与数据库中的字段匹配
 	}
 
 	// 查找在指定时间段内开始或结束的预约，并关联用户表以获取用户名
-	tx := global.DB.Table("reservations").
-		Select("reservations.*, users.username").
-		Joins("join users on users.id = reservations.user_id").
-		Where("reservations.start_time BETWEEN ? AND ? OR reservations.over_time BETWEEN ? AND ?", startTime, endTime, startTime, endTime).
-		Find(&reservations)
+	tx := global.DB.Table("reservation"). // 指定查询的表是`reservation`
+						Select("reservation.*, user.username").                                                                                           // 修改了这里：从 "users.username" 到 "user.username"
+						Joins("join user on user.id = reservation.user_id").                                                                              // 修改了这里：从 "join users" 到 "join user"
+						Where("reservation.start_time BETWEEN ? AND ? OR reservation.over_time BETWEEN ? AND ?", startTime, endTime, startTime, endTime). // 在`WHERE`子句中定义筛选条件
+						Find(&reservations)                                                                                                               // 执行查询，并将结果填充到`reservations`变量中
 
 	// 检查是否找到了记录
 	if tx.Error != nil {

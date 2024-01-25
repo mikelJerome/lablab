@@ -1,0 +1,42 @@
+2024-01-24T15:54:13.421+0800	ERROR	handler/reserve.go:30		{"error": "parsing time \"2024-01-24 15:46:30\": extra text: \":30\""}
+lab_sys/handler.Reserve
+	D:/lab_sys/handler/reserve.go:30
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995
+2024-01-24T17:31:46.525+0800	ERROR	handler/reserve.go:31		{"error": "parsing time \"2024-01-25 07:46:00\": extra text: \":00\""}
+lab_sys/handler.Reserve
+	D:/lab_sys/handler/reserve.go:31
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/recovery.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/logger.go:240
+github.com/gin-gonic/gin.(*Context).Next
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/context.go:174
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:620
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	C:/Users/mikel/go/pkg/mod/github.com/gin-gonic/gin@v1.9.1/gin.go:576
+net/http.serverHandler.ServeHTTP
+	E:/go/src/net/http/server.go:2936
+net/http.(*conn).serve
+	E:/go/src/net/http/server.go:1995

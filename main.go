@@ -5,6 +5,7 @@ import (
 	"go.uber.org/zap"
 	"lab_sys/global"
 	"lab_sys/initialize"
+	"log"
 )
 
 func main() {
@@ -12,6 +13,7 @@ func main() {
 	//初始化数据库
 	initialize.InitDB()
 	initialize.InitRedis()
+	log.Print(global.Redis)
 	//初始化日志
 	initialize.InitLogger()
 	//初始化我们的路由服务
